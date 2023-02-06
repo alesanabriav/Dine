@@ -11,6 +11,10 @@
 		7A09E37C2991752C0035C778 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A09E37B2991752C0035C778 /* ContentView.swift */; };
 		7A09E37E2991752D0035C778 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A09E37D2991752D0035C778 /* Assets.xcassets */; };
 		7A09E3812991752D0035C778 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A09E3802991752D0035C778 /* Preview Assets.xcassets */; };
+		7A09E3892991757D0035C778 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A09E3882991757D0035C778 /* Bundle.swift */; };
+		7A09E38C2991765F0035C778 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A09E38B2991765F0035C778 /* Order.swift */; };
+		7A09E38E299176670035C778 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A09E38D299176670035C778 /* Menu.swift */; };
+		7A09E390299176D70035C778 /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = 7A09E38F299176D70035C778 /* menu.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		7A09E37B2991752C0035C778 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7A09E37D2991752D0035C778 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A09E3802991752D0035C778 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7A09E3882991757D0035C778 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		7A09E38B2991765F0035C778 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		7A09E38D299176670035C778 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		7A09E38F299176D70035C778 /* menu.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +59,13 @@
 		7A09E3782991752C0035C778 /* iDine */ = {
 			isa = PBXGroup;
 			children = (
+				7A09E38A2991764D0035C778 /* Models */,
+				7A09E387299175600035C778 /* Extensions */,
 				7A09E3792991752C0035C778 /* iDineApp.swift */,
 				7A09E37B2991752C0035C778 /* ContentView.swift */,
 				7A09E37D2991752D0035C778 /* Assets.xcassets */,
 				7A09E37F2991752D0035C778 /* Preview Content */,
+				7A09E38F299176D70035C778 /* menu.json */,
 			);
 			path = iDine;
 			sourceTree = "<group>";
@@ -65,6 +76,23 @@
 				7A09E3802991752D0035C778 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7A09E387299175600035C778 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7A09E3882991757D0035C778 /* Bundle.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7A09E38A2991764D0035C778 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7A09E38B2991765F0035C778 /* Order.swift */,
+				7A09E38D299176670035C778 /* Menu.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A09E390299176D70035C778 /* menu.json in Resources */,
 				7A09E3812991752D0035C778 /* Preview Assets.xcassets in Resources */,
 				7A09E37E2991752D0035C778 /* Assets.xcassets in Resources */,
 			);
@@ -138,7 +167,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A09E37C2991752C0035C778 /* ContentView.swift in Sources */,
+				7A09E3892991757D0035C778 /* Bundle.swift in Sources */,
+				7A09E38C2991765F0035C778 /* Order.swift in Sources */,
 				7A09E37A2991752C0035C778 /* iDineApp.swift in Sources */,
+				7A09E38E299176670035C778 /* Menu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
