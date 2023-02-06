@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel = MenuViewModel()
+    
     var body: some View {
         NavigationStack {
             List {
