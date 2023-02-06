@@ -8,14 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = MenuViewModel()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                ForEach(viewModel.menuSections) { section in
+                    Section(section.name) {
+                        ForEach(section.items) { item in
+                            NavigationLink {
+                                MenuItemDetailView(item: item)
+                            } label: {
+                                MenuItemView(item: item, viewModel: viewModel)
+                            }
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Menu")
+            .listStyle(.grouped)
         }
-        .padding()
+        .onAppear {
+            viewModel.getSections()
+        }
     }
 }
 

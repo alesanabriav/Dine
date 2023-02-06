@@ -9,7 +9,7 @@ import Foundation
 
 extension Bundle {
     
-    func Decode<T: Decodable>(_ type: T.Type, from file: String) -> T? {
+    func decode<T: Decodable>(_ type: T.Type, from file: String) -> T? {
         
         guard let url = self.url(forResource: file, withExtension: nil) else {
             return nil
