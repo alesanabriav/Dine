@@ -18,9 +18,10 @@ struct OrderView: View {
                         HStack {
                             Text(item.name)
                             Spacer()
-                            Text("\(item.price)")
+                            Text(item.price.formatted(.currency(code: "USD")))
                         }
                     }
+                    .onDelete(perform: deleteItems)
                 }
                 
                 Section {
@@ -28,9 +29,20 @@ struct OrderView: View {
                         CheckoutView(viewModel: CheckoutViewModel())
                     }
                 }
+                .disabled(order.items.isEmpty)
             }
             .navigationTitle("Order")
+            .toolbar {
+//                if !order.items.isEmpty {
+//                    EditButton()
+//                }
+               
+            }
         }
+    }
+    
+    func deleteItems(at offsets: IndexSet) {
+        order.items.remove(atOffsets: offsets)
     }
 }
 

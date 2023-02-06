@@ -75,7 +75,6 @@
 			children = (
 				7A09E39A29919DCD0035C778 /* Order */,
 				7A09E39129917CA30035C778 /* Menu */,
-				7A09E38A2991764D0035C778 /* Models */,
 				7A09E387299175600035C778 /* Extensions */,
 				7A09E3792991752C0035C778 /* iDineApp.swift */,
 				7A09E37B2991752C0035C778 /* ContentView.swift */,
@@ -103,14 +102,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		7A09E38A2991764D0035C778 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				7A09E38B2991765F0035C778 /* Order.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		7A09E39129917CA30035C778 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +116,7 @@
 		7A09E39A29919DCD0035C778 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				7A09E38B2991765F0035C778 /* Order.swift */,
 				7A09E39B29919DDC0035C778 /* OrderView.swift */,
 				7A09E39F2991A28A0035C778 /* CheckoutView.swift */,
 				7A09E3A12991A9CB0035C778 /* CheckoutViewModel.swift */,

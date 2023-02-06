@@ -26,4 +26,8 @@ class Order: ObservableObject {
             items.remove(at: index)
         }
     }
+    
+    func clean() {
+        items = [MenuItem]()
+    }
 }

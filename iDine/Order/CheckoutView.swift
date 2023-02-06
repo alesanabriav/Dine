@@ -8,7 +8,15 @@
 import SwiftUI
 
 struct CheckoutView: View {
+    @EnvironmentObject var order: Order
     @ObservedObject var viewModel: CheckoutViewModel
+    
+    var totalPrice: String {
+        let total = Double(order.total)
+        let tipValue = total / 100 * Double(viewModel.tipAmount)
+        
+        return (total + tipValue).formatted(.currency(code: "USD"))
+    }
     
     var body: some View {
         Form {
@@ -35,13 +43,19 @@ struct CheckoutView: View {
                 .pickerStyle(.segmented)
             }
             
-            Section("Total: 100%") {
+            Section("Total: \(totalPrice)") {
                 Button("Confirm order") {
-                    
+                    viewModel.togglePaymentAlert()
                 }
             }
         }
         .navigationTitle("Payment")
+        .alert("Order confirmed", isPresented: $viewModel.showPaymentAlert) {
+            
+        } message: {
+            Text("Your total was \(totalPrice)")
+        }
+    
     }
 }
 
